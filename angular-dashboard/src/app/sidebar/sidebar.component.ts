@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   imports: [],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-
+  @Input() isOpen: boolean = false;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['isOpen']) {
+      console.log('Sidebar isOpen:', changes['isOpen'].currentValue);
+    }
+  }
 }
