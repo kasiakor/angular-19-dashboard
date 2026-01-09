@@ -11,7 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 })
 export class AppComponent {
   title = 'angular-dashboard';
-  isSidebarOpen = false;
+  isSidebarOpen = true;
 
   toggleSidebar(): void {
     console.log('from app', this.isSidebarOpen);

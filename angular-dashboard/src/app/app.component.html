@@ -1,8 +1,10 @@
-<app-navbar (openSidebar)="toggleSidebar()"></app-navbar>
+<app-navbar class="top-bar" (openSidebar)="toggleSidebar()"></app-navbar>
 
 <app-sidebar
   [isOpen]="isSidebarOpen"
   class="top-bar__side-bar"
   [class.open]="isSidebarOpen"
 ></app-sidebar>
-<router-outlet></router-outlet>
+<div class="top-bar__content-section">
+  <router-outlet></router-outlet>
+</div>
